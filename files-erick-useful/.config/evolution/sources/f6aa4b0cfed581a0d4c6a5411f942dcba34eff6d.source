@@ -1,0 +1,29 @@
+[Data Source]
+DisplayName=erickprogold2@gmail.com
+Enabled=true
+Parent=cbd03811a1ccf4740a3cd26a6619a552a4690795
+
+[Mail Submission]
+SentFolder=folder://local/Sent
+TransportUid=cef0ddb08d4ff4773bdb113bfb6098e55e79f8b3
+RepliesToOriginFolder=false
+UseSentFolder=true
+
+[Mail Composition]
+Bcc=
+Cc=
+DraftsFolder=folder://local/Drafts
+ReplyStyle=default
+SignImip=true
+TemplatesFolder=
+StartBottom=inconsistent
+TopSignature=inconsistent
+Language=
+
+[Mail Identity]
+Address=erickprogold2@gmail.com
+Aliases=
+Name=
+Organization=
+ReplyTo=
+SignatureUid=none

@@ -1,0 +1,20 @@
+[Data Source]
+DisplayName=erickprogold2@gmail.com
+Enabled=true
+Parent=cbd03811a1ccf4740a3cd26a6619a552a4690795
+
+[Authentication]
+Host=smtp.gmail.com
+Method=XOAUTH2
+Port=465
+ProxyUid=system-proxy
+RememberPassword=true
+User=erickprogold2@gmail.com
+CredentialName=
+IsExternal=false
+
+[Security]
+Method=ssl-on-alternate-port
+
+[Mail Transport]
+BackendName=smtp

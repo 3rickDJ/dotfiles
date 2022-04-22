@@ -1,0 +1,44 @@
+[Data Source]
+DisplayName=erickprogold2@gmail.com
+Enabled=true
+Parent=
+
+[Authentication]
+Host=
+Method=OAuth2
+Port=0
+ProxyUid=system-proxy
+RememberPassword=true
+User=
+CredentialName=
+IsExternal=true
+
+[Collection]
+BackendName=google
+CalendarEnabled=false
+ContactsEnabled=true
+Identity=erickprogold2@gmail.com
+MailEnabled=true
+AllowSourcesRename=false
+CalendarUrl=
+ContactsUrl=
+
+[GNOME Online Accounts]
+AccountId=account_1641048885_0
+CalendarUrl=https://apidata.googleusercontent.com/caldav/v2/erickprogold2@gmail.com/user
+ContactsUrl=https://www.googleapis.com/.well-known/carddav
+Name=
+Address=erickprogold2@gmail.com
+
+[WebDAV Backend]
+AvoidIfmatch=false
+CalendarAutoSchedule=false
+Color=
+DisplayName=
+EmailAddress=
+ResourcePath=
+ResourceQuery=
+SslTrust=
+
+[Security]
+Method=none

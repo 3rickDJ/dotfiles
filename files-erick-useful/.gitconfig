@@ -1,0 +1,16 @@
+[color]
+	ui = auto
+
+[commit]
+	gpgsign = true
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = false
+
+[user]
+	email = erick.dejesus1@alumno.buap.mx
+	name = 3rickDJ
+	##signingkey = 92EC9BE3A6EB8FAA
