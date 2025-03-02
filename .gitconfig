@@ -1,0 +1,31 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[init]
+  defaultBranch = main
+
+[pull]
+  rebase = true
+
+[user]
+  name = 3rickDJ
+  email = erick@makingdevs.com
+
+[core]
+  pager = delta
+  editor = vim
+	commentChar = ";"
+
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
+  light = false
+  features = decorations
+  side-by-side = true
+
+[safe]
+	directory = /Applications/XAMPP/xamppfiles/htdocs

@@ -1,0 +1,92 @@
+set -g prefix C-a
+set -g default-command "/usr/local/bin/fish"
+unbind C-b
+set -sg escape-time 1
+set -g base-index 1
+setw -g pane-base-index 1
+
+bind r source-file ~/.tmux.conf \; display "Configuración recargada"
+bind C-a send-prefix
+bind | split-window -h -c "#{pane_current_path}"
+bind - split-window -v -c "#{pane_current_path}"
+bind c new-window -c "#{pane_current_path}"
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+bind -r C-h select-window -t :-
+bind -r C-l select-window -t :+
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 6
+bind -r L resize-pane -R 5
+# Enable mouse control (clickable windows, panes, resizable panes)
+set -g mouse on
+# set -g mouse-select-pane off
+# set -g mouse-resize-pane off
+# set mouse-select-window off
+set -g default-terminal "screen-256color"
+set -g status-fg white
+set -g status-bg black
+setw -g window-status-style fg=cyan
+setw -g window-status-style bg=default
+setw -g window-status-style dim
+setw -g window-status-current-style fg=white
+setw -g window-status-current-style bg=red
+setw -g window-status-current-style bright
+set -g pane-border-style fg=green
+set -g pane-border-style bg=black
+set -g pane-active-border-style fg=white
+set -g pane-active-border-style bg=yellow
+set -g message-style fg=white
+set -g message-style bg=black
+set -g message-style bright
+set -g status-left-length 40
+set -g status-left "#[fg=green]Session: #S #[fg=yellow]#I #[fg=cyan]#P"
+set -g status-right "#[fg=cyan]%d %b %R"
+# setw -g utf8 on
+# set -g status-utf8 on
+set -g status-interval 60
+set -g status-justify centre
+setw -g monitor-activity on
+set -g visual-activity on
+setw -g mode-keys vi
+unbind [
+bind Escape copy-mode
+unbind p
+bind-key p paste-buffer
+bind [ copy-mode
+bind-key -Tcopy-mode-vi 'v' send -X begin-selection
+bind-key -Tcopy-mode-vi 'y' send -X copy-selection "reattach-to-user-namespace pbcopy"
+bind-key -Tcopy-mode-vi 'Escape' send -X cancel
+bind ] paste-buffer
+# buffer
+bind Space choose-buffer
+
+bind-key -n C-k send-keys -R \; clear-history
+
+# -----------------------------
+# panes
+#set -g pane-border-style 'fg=colour19 bg=colour8'
+#set -g pane-active-border-style 'bg=colour0 fg=colour9'
+
+# -----------------------------
+
+
+# Set color palette
+# set-option -ga terminal-overrides ",*256col*:Tc"
+# set -ag terminal-overrides ',*:RGB'
+
+
+# Set individual colors
+# set-option -g status-bg colour236  # Adjust with your desired color number
+# set-option -g status-fg colour255  # Adjust with your desired color number
+
+# ---
+# statusbar
+# set -g status-position bottom
+# set -g status-justify left
+# set -g status-style 'bg=colour18 fg=colour137 dim'
+# set -g status-left ''
+# set -g status-right-length 50
+# set -g status-left-length 20
